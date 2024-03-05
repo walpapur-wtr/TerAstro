@@ -68,19 +68,13 @@ export const interestingLinks = [
             {
                 name: "Бердянское общество любителей астрономии ОРИОН",
                 websites: [
-                    { name: "", url: "https://www.orion-ua.org/" },
+                    { name: "Офіційний сайт", url: "https://www.orion-ua.org/" },
                 ]
             },
             {
                 name: "Astrodes Одесское общество любителей астрономии",
                 websites: [
-                    { name: "", url: "http://astrodes.com/" },
-                ]
-            },
-            {
-                name: "Astrodes Одесское общество любителей астрономии",
-                websites: [
-                    { name: "", url: "http://astrodes.com/" },
+                    { name: "Офіційний сайт", url: "http://astrodes.com/" },
                 ]
             },
             {
@@ -99,7 +93,7 @@ export const interestingLinks = [
             {
                 name: "Астрономічна обсерваторія Київського національного університету імені Тараса Шевченка",
                 websites: [
-                    { name: "", url: "http://www.observ.univ.kiev.ua/obs/" },
+                    { name: "Офіційний сайт", url: "http://www.observ.univ.kiev.ua/obs/" },
                 ]
             }, 
             {
@@ -148,13 +142,13 @@ export const interestingLinks = [
             {
                 name: "Українська віртуальна обсерваторія",
                 websites: [
-                    { name: "", url: "http://ukr-vo.org/" }
+                    { name: "Офіційний сайт", url: "http://ukr-vo.org/" }
                 ]
             },
             {
                 name: "Полтавська гравіметрична обсерваторія Інституту геофізики імені С.І.Субботіна НАН України",
                 websites: [
-                    { name: "" , url: "http://pgo.geoplanet.org/"}
+                    { name: "Офіційний сайт" , url: "http://pgo.geoplanet.org/"}
                 ]
             }
         ]
@@ -271,7 +265,7 @@ export const interestingLinks = [
             {
                 name: "Інститут космічних досліджень Національної Академії Наук України та  Державного Космічного Агентства України",
                 websites: [
-                    { name: "", url: "http://www.ikd.kiev.ua/" }
+                    { name: "Офіційний сайт", url: "http://www.ikd.kiev.ua/" }
                 ]
             },
         ]
@@ -285,7 +279,7 @@ export const interestingLinks = [
                 name: "Освітній астрономічний портал",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "https://education-project.space"
                     }
                 ]
@@ -294,7 +288,7 @@ export const interestingLinks = [
                 name: "Освітній астрономічний портал Astroosvita",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "http://astroosvita.kiev.ua"
                     }
                 ]
@@ -303,7 +297,7 @@ export const interestingLinks = [
                 name: "Український астрономічний портал Astrosvit",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "http://www.astrosvit.in.ua"
                     }
                 ]
@@ -312,7 +306,7 @@ export const interestingLinks = [
                 name: "Астрономічний портал ДАЛЕКІ ЗОРІ",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "http://daleki-zori.com.ua"
                     }
                 ]
@@ -348,7 +342,7 @@ export const interestingLinks = [
                 name: "Астрономія для всіх",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "https://sites.google.com/view/forastronomy/домашня-сторінка?authuser=0"
                     }
                 ]
@@ -480,7 +474,7 @@ export const interestingLinks = [
                 ]
             },
             {
-                name: "SE &#8220;PA Yuzhmash&#8221;",
+                name: "SE ''PA Yuzhmash''",
                 websites: [
                     {
                         name: "Facebook",
@@ -591,7 +585,7 @@ export const interestingLinks = [
                 name: "Атлас Вселенной",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "http://transcendens.info/Atlas_Vselennoj.html"
                     }
                 ]
@@ -600,7 +594,7 @@ export const interestingLinks = [
                 name: "Tokar.ua",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "https://tokar.ua/tag/space"
                     }
                 ]
@@ -609,7 +603,7 @@ export const interestingLinks = [
                 name: "ФізикАстро блог",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "https://physykastro.blogspot.com/?fbclid=IwAR0-6Nrd0Y9zae6AzA_xZk5g4sglWKpARrwVXunxB8N_6cxNdA3AVRzyhyA"
                     }
                 ]
@@ -624,7 +618,7 @@ export const interestingLinks = [
                 name: "Галактика Чумацький шлях",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "http://stars.chromeexperiments.com"
                     }
                 ]
@@ -633,7 +627,7 @@ export const interestingLinks = [
                 name: "Videos ESO",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "https://www.eso.org/public/videos/"
                     }
                 ]
@@ -642,7 +636,7 @@ export const interestingLinks = [
                 name: "Solar Systemscope",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "https://www.solarsystemscope.com"
                     }
                 ]
@@ -651,7 +645,7 @@ export const interestingLinks = [
                 name: "Ютуб-канал Alpha Centauri",
                 websites: [
                     {
-                        name: "",
+                        name: "Покликання на відео",
                         url: "https://www.youtube.com/user/threedaysfaq/playlists?view=1&sort=dd&shelf_id=5"
                     }
                 ]
@@ -660,7 +654,7 @@ export const interestingLinks = [
                 name: "Ancient Earth globe",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "http://dinosaurpictures.org/ancient-earth?fbclid=IwAR2nFk9xVUGsxNiX8NuSl_Gok_LF6MJoj50g2H8du7x_jU7OPlnyJ1Kj19s#300"
                     }
                 ]
@@ -686,7 +680,7 @@ export const interestingLinks = [
                 name: "Пригоризонтна обсерваторія часів бронзової доби Безводівка та її сайт",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "http://bezvodovka.com/ua/"
                     }
                 ]
@@ -695,7 +689,7 @@ export const interestingLinks = [
                 name: "Візуалізація центральної частини нашої галактики: гігапіксельна мозаїка",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "https://www.eso.org/public/images/eso1242a/zoomable/?fbclid=IwAR3RJXM6ZRJ7xHDjmgKzrpFvsiZjIg_vw0P9SHyR126BTO0hbcPXiAx-SUE"
                     }
                 ]
@@ -724,7 +718,7 @@ export const interestingLinks = [
                 name: "Серія уроків по астрофото від Олега Бризгалова",
                 websites: [
                     {
-                        name: "",
+                        name: "Покликання на відео",
                         url: "https://www.youtube.com/playlist?list=PLplkDJQlAISoAqLylYyGMpwPTE_26sG3v"
                     }
                 ]
@@ -733,7 +727,7 @@ export const interestingLinks = [
                 name: "Коротка стаття з поясненням, що таке дарки, байаси, флети",
                 websites: [
                     {
-                        name: "",
+                        name: "Офіційний сайт",
                         url: "https://dsastro.ru/2019/02/04/dark-bias-flat/?fbclid=IwAR20eKzSCZ2VtSQnfev0YRAJOyWPfTI8IudddaJPy06ucqBaPfG5jSJpo-4"
                     }
                 ]
