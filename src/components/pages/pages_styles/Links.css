@@ -3,9 +3,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 3vh;
+    margin-bottom: 7vh;
 }
 
+.general-title{
+    width: 100vh;
+    text-align: left;
+    font-size: 2.5vh;
+    line-height: 3.8vh;
+    margin-bottom: 5vh;
+}
 
 .acordeon-title{
     margin-top: 3vh;
@@ -22,20 +29,54 @@
 
     font-size: 2.4vh;
     border: 0.1vh solid rgb(137, 137, 137);
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.25); 
+
 }
 
 .acordeon-links{
-    background: #c7c7c7;
+    width: 100vh;
+    background: #f1f0f0;
+    font-size: 2.4vh;
+    margin-bottom: 3vh;
+    padding: 0 2vh;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.25); 
 }
+
+.link{
+    margin-top: 2vh;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+    padding-left: 2.2vh; 
+}
+
+
 
 @media screen and (max-width: 960px){
     .acordeon-title{
+        width: 70vh;
+    }
+    .acordeon-links{
+        width: 70vh;
+    }
+    .general-title{
         width: 70vh;
     }
 }
 
 @media screen and (max-width: 550px){
     .acordeon-title{
+        width: 45vh;
+    }
+    .acordeon-links{
+        width: 45vh;
+    }
+    .general-title{
         width: 45vh;
     }
 }
