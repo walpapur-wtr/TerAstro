@@ -1,0 +1,16 @@
+.terastro {
+    display: flex;
+    justify-content: center;
+    padding: 0 3vh;
+}
+
+.terastro-container {
+    width: 80%;
+}
+
+
+.terastro-text{
+    font-size: 2.6vh;
+    line-height: 4.8vh;
+    margin-bottom: 8vh;
+}
