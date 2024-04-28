@@ -49,7 +49,7 @@
     margin-top: 2vh;
 }
 
-a {
+.acordeon-links a {
     text-decoration: none; 
     color: inherit; 
     padding-left: 2.2vh; 

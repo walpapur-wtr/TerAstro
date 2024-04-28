@@ -4,7 +4,7 @@ import Hero from "../Hero";
 export default function Blog(){
     return(
         <div>
-            <Blog page="blog"/>
+            <Hero page="blog"/>
         </div>
     )
 }
