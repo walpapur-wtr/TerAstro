@@ -1,3 +1,4 @@
+//server.js
 const express = require('express');
 const path = require('path');
 const fs = require('fs').promises;
@@ -67,33 +68,28 @@ app.get('/get-articles', async (req, res) => {
 
 // Endpoint to get a single article by its ID
 app.get('/article/:id', async (req, res) => {
-    const id = req.params.id;
-  
-    try {
-      // Read the article file with the corresponding ID
-      const fileName = `${id}-*.json`;
-      const files = await fs.readdir(ARTICLES_DIR);
-      const articleFile = files.find(file => file.match(fileName));
-  
-      if (!articleFile) {
-        return res.status(404).send('Article not found');
-      }
-  
-      const filePath = path.join(ARTICLES_DIR, articleFile);
-      const data = await fs.readFile(filePath);
-      const article = JSON.parse(data);
-  
-      res.status(200).json({ article });
-    } catch (error) {
-      console.error('Error getting article:', error);
-      res.status(500).send('Failed to get article');
-    }
-  });
+  const id = req.params.id;
 
-// React компонент для відображення каталогу статей
-app.get('/catalog', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'build', 'catalog.html')); // Припустимо, у вас є окрема сторінка для каталогу
+  try {
+    // Read the article file with the corresponding ID
+    const files = await fs.readdir(ARTICLES_DIR);
+    const articleFile = files.find(file => file.startsWith(`${id}-`));
+
+    if (!articleFile) {
+      return res.status(404).send('Article not found');
+    }
+
+    const filePath = path.join(ARTICLES_DIR, articleFile);
+    const data = await fs.readFile(filePath);
+    const article = JSON.parse(data);
+
+    res.status(200).json({ article });
+  } catch (error) {
+    console.error('Error getting article:', error);
+    res.status(500).send('Failed to get article');
+  }
 });
+
 
 // Always return React app
 app.get('*', (req, res) => {

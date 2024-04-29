@@ -18,6 +18,7 @@ import WhiteSwan from "../src/components/pages/WhiteSwan"
 import Links from "../src/components/pages/Links"
 import Blog from "../src/components/pages/Blog"
 import Kontakty from "../src/components/pages/Kontakty"
+import ArticlePage from "./components/pages/ArticlePage";
 
 import Signup from "./components/forAdmin/Signup"
 
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/links" element={<Links />} />
           <Route path="/kontakty" element={<Kontakty />} />
           <Route path="/admin" element={<Signup />} />
+          <Route path="/article/:id" element={<ArticlePage />} />
         </Routes>
         {isNonAdminRoute && <Footer />}
       </Router>
