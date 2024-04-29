@@ -1,40 +1,107 @@
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs').promises;
 
 const app = express();
+app.use(express.json());
 
-// Задай шлях до папки зі статтями
-const articlesPath = path.join(__dirname, 'articles');
+const ARTICLES_DIR = 'articles';
+//const TRASH_DIR = 'trash';
 
-// Ендпоінт для отримання списку статей
-app.get('/articles', (req, res) => {
-  // Отримай список файлів у папці
-  fs.readdir(articlesPath, (err, files) => {
-    if (err) {
-      console.error('Error reading articles directory:', err);
-      res.status(500).json({ error: 'Internal server error' });
-      return;
-    }
+// Middleware to serve React app
+app.use(express.static('build'));
 
-    // Читай кожен файл та повертай його як частину відповіді
-    const articles = [];
-    files.forEach(file => {
-      const filePath = path.join(articlesPath, file);
-      const article = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-      articles.push(article);
-    });
+// Endpoint to save article
+app.post('/save-article', async (req, res) => {
+  const { title, content, categories } = req.body;
+  const author = req.body.author || 'default author';
+  const createdAt = new Date().toISOString();
 
-    res.json(articles);
-  });
+  try {
+    // Create articles directory if it doesn't exist
+    await fs.mkdir(ARTICLES_DIR, { recursive: true });
+
+    // Get the list of articles in the directory
+    const articles = await fs.readdir(ARTICLES_DIR);
+
+    // Generate unique ID based on the number of existing articles
+    const id = articles.length + 1;
+
+    // Generate file name with ID and title
+    const fileName = `${id}-${title.replace(/ /g, '_')}.json`;
+
+    // Construct path to the new article file
+    const filePath = path.join(ARTICLES_DIR, fileName);
+
+    // Write article data to the file
+    await fs.writeFile(filePath, JSON.stringify({ id, title, content, author, createdAt, categories }, null, 2));
+
+    res.status(200).send('Article saved successfully!');
+  } catch (error) {
+    console.error('Error saving article:', error);
+    res.status(500).send('Failed to save article');
+  }
 });
 
+// Endpoint to get all articles
+app.get('/get-articles', async (req, res) => {
+  try {
+    const articles = [];
+
+    // Read all files in the articles directory
+    const files = await fs.readdir(ARTICLES_DIR);
+
+    // Read content of each article file and add to articles array
+    for (const file of files) {
+      const filePath = path.join(ARTICLES_DIR, file);
+      const data = await fs.readFile(filePath);
+      articles.push(JSON.parse(data));
+    }
+
+    res.status(200).json({ articles });
+  } catch (error) {
+    console.error('Error getting articles:', error);
+    res.status(500).send('Failed to get articles');
+  }
+});
+
+// Endpoint to get a single article by its ID
+app.get('/article/:id', async (req, res) => {
+    const id = req.params.id;
+  
+    try {
+      // Read the article file with the corresponding ID
+      const fileName = `${id}-*.json`;
+      const files = await fs.readdir(ARTICLES_DIR);
+      const articleFile = files.find(file => file.match(fileName));
+  
+      if (!articleFile) {
+        return res.status(404).send('Article not found');
+      }
+  
+      const filePath = path.join(ARTICLES_DIR, articleFile);
+      const data = await fs.readFile(filePath);
+      const article = JSON.parse(data);
+  
+      res.status(200).json({ article });
+    } catch (error) {
+      console.error('Error getting article:', error);
+      res.status(500).send('Failed to get article');
+    }
+  });
+
+// React компонент для відображення каталогу статей
+app.get('/catalog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'catalog.html')); // Припустимо, у вас є окрема сторінка для каталогу
+});
+
+// Always return React app
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 
+// Start server
 const PORT = process.env.PORT || 3000;
-console.log("started!");
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
