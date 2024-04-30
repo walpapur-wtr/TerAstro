@@ -63,7 +63,7 @@ const HeroItems = {
         title: "Контакти",
         subTitle: "",
         imgPath: "contact.jpg"
-    }
+    },
 };
 
 export default HeroItems;

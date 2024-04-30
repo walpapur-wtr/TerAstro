@@ -8,7 +8,7 @@
 
 .nebozvid-contaiter h2 {
     width: 80%;
-    max-width: 800px; /* Зберігаємо максимальну ширину, щоб текст не ставав надто широким */
+    max-width: 800px; 
     font-size: 2.8vh;
     line-height: 4vh;
     margin-bottom: 8vh;
@@ -16,7 +16,7 @@
 
 .nebozvid-foto-box {
     width: 80%;
-    max-width: 800px; /* Зберігаємо максимальну ширину */
+    max-width: 800px; 
 }
 
 .nebozvid-foto-box img {
