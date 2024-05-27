@@ -1,0 +1,31 @@
+.links-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3vh;
+}
+
+.links-box{
+    margin-bottom: 10vh;
+}
+
+.links-box h1{
+    font-size: 3vh;
+    color: rgb(103, 98, 98);
+    margin-bottom: 4vh;
+}
+
+.links-box a{
+    display: block;
+    margin: 3vh 0;
+    font-size: 2.2vh;
+    text-decoration: underline;
+    color: black;
+}
+
+.links-box a:hover{
+    color: #6046e4;
+    text-decoration: underline;
+    transition: 0.5s;
+}

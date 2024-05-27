@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style-singin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./image/terastro.jpg">
+  <title>Сторінка входу та реєстрації</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="form-container" id="login">
+        <img class="login_img" src="./image/login.svg" alt="">
+        <form action="singin.php" method="post">
+          <input class="email" type="email" name="email" placeholder="Електронна пошта" required>
+          <input class="password" type="password" name="password" placeholder="Пароль" required>
+          <button class="login-button" type="submit" name="login"> <p class="text-login">Увійти</p></button>
+        </form>
+        <div class="register-link">
+          <a href="singup.html"><button class="button-register">Зареєструватися</button></a>  
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
